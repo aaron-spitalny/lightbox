@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lightbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RVQ-G1-5y9">
+                                <rect key="frame" x="0.0" y="30" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5q-U3-YaV">
+                                <rect key="frame" x="160" y="592" width="57" height="55"/>
+                                <color key="backgroundColor" red="0.0028748919721692801" green="0.74909502267837524" blue="0.9949156641960144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <state key="normal" backgroundImage="Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureImageBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Npr-0a-bNi"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8S-qG-U3D">
+                                <rect key="frame" x="32" y="84" width="312" height="461"/>
+                                <color key="backgroundColor" red="0.92538958787918091" green="0.92554813623428345" blue="0.92537957429885864" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <viewLayoutGuide key="safeArea" id="Ffc-Rk-I9O"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C8S-qG-U3D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="3o3-dV-VK3"/>
+                            <constraint firstItem="C8S-qG-U3D" firstAttribute="centerX" secondItem="H5q-U3-YaV" secondAttribute="centerX" id="98x-oa-gtq"/>
+                            <constraint firstItem="RVQ-G1-5y9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FrK-fR-eVR"/>
+                            <constraint firstAttribute="trailing" secondItem="RVQ-G1-5y9" secondAttribute="trailing" id="bJr-kL-HmS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RVQ-G1-5y9" secondAttribute="bottom" constant="-10" id="cbg-tj-B7G"/>
+                            <constraint firstItem="H5q-U3-YaV" firstAttribute="top" secondItem="C8S-qG-U3D" secondAttribute="bottom" constant="47" id="dlG-4q-bUA"/>
+                            <constraint firstItem="C8S-qG-U3D" firstAttribute="centerX" secondItem="RVQ-G1-5y9" secondAttribute="centerX" id="qf5-2r-f81"/>
+                            <constraint firstItem="C8S-qG-U3D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="sKf-GA-qIC"/>
+                            <constraint firstAttribute="bottom" secondItem="C8S-qG-U3D" secondAttribute="bottom" constant="122" id="sgm-fX-PUS"/>
+                            <constraint firstItem="RVQ-G1-5y9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zTp-cq-bYx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="captureImageBtn" destination="H5q-U3-YaV" id="ZUB-97-ZCy"/>
+                        <outlet property="imageView" destination="RVQ-G1-5y9" id="4qO-Cv-ZK1"/>
+                        <outlet property="rect" destination="C8S-qG-U3D" id="AJT-D4-IL3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="119.1904047976012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="55" height="55"/>
+    </resources>
+</document>
